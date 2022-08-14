@@ -263,6 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422534421}
   - component: {fileID: 422534420}
+  - component: {fileID: 422534422}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -303,6 +304,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &422534422
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422534419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3
+  m_Radius: 0.25
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &605454493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1358,7 +1377,7 @@ MonoBehaviour:
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_RightHandMoveAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Right Hand Move
       m_Type: 0
@@ -1503,6 +1522,7 @@ GameObject:
   - component: {fileID: 1368049354}
   - component: {fileID: 1368049353}
   - component: {fileID: 1368049352}
+  - component: {fileID: 1368049356}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1517,14 +1537,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368049350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1449368492}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!114 &1368049352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1532,7 +1552,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368049350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
@@ -2011,6 +2031,21 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1368049356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368049350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d0c4003081e8943aec8185df666012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ourHandPrefab: {fileID: 8469701719644255386, guid: cc3ae9d5b3ee13c49845cb105b24274b,
+    type: 3}
+  ourControllerCharacteristics: 576
 --- !u!1001 &1377079210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2150,6 +2185,7 @@ GameObject:
   - component: {fileID: 1415563996}
   - component: {fileID: 1415563995}
   - component: {fileID: 1415563994}
+  - component: {fileID: 1415563998}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -2179,7 +2215,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415563992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
@@ -2658,6 +2694,21 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1415563998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415563992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d0c4003081e8943aec8185df666012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ourHandPrefab: {fileID: 279971324132984019, guid: b87b58a45ce73f041b77dda87b4d9e6c,
+    type: 3}
+  ourControllerCharacteristics: 320
 --- !u!1 &1449368491
 GameObject:
   m_ObjectHideFlags: 0
